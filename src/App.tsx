@@ -6,7 +6,7 @@ import { IDetectedBarcode, Scanner } from '@yudiel/react-qr-scanner';
 function App() {
   const [scanning, setScanning] = useState(false)
   const [text, setText] = useState('')
-  const [preview, setPreview] = useState(false)
+  // const [preview, setPreview] = useState(false)
   const [showCopied, setShowCopied] = useState(false)
 
   const handleScan = (result: IDetectedBarcode[]) => {
