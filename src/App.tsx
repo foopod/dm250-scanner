@@ -23,7 +23,7 @@ function App() {
       <button className='mx-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400'
         onClick={() => setScanning(true)} > {text.length > 0 ? 'Scan More' : 'Scan'} </button>
       {scanning &&
-        <Scanner onScan={handleScan} />
+        <Scanner onScan={handleScan} components={{audio: false}}/>
       }
       {text.length > 0 &&
         <p>{text}</p>
