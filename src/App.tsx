@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-      <button onClick={() => setScanning(true)} />
+      <button onClick={() => navigator.clipboard.writeText(text)} > Done </button>
+      <button onClick={() => setScanning(true)} > Scan </button>
       { scanning &&
         <Scanner onScan={(result) => setText(old => old + result)} />
       }
