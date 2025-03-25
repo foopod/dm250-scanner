@@ -11,7 +11,11 @@ function App() {
 
   const handleScan = (result: IDetectedBarcode[]) => {
     result.forEach(r => {
-      setText((prev) => prev + r.rawValue.slice(7))
+      if(r.rawValue.slice(0, 2) === "KJ){
+         setText((prev) => prev + r.rawValue.slice(7))
+      } else {
+         setText((prev) => prev + r.rawValue)
+      }
     })
     setScanning(false)
   }
